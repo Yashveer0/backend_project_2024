@@ -19,4 +19,11 @@ const app = express();
 
  app.use(cookieParser())
 
-export {app}
+ // routes import
+ import userRouter from './routes/user.routes.js';
+
+ //routes declaration 
+
+ app.use("/api/v1/users", userRouter)
+
+export default app

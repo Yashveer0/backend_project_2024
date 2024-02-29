@@ -1,5 +1,5 @@
 const aysncHandler = (requestHandler) => {
-    (req, res, next) => {
+   return  (req, res, next) => {
         Promise.resolve(
             requestHandler(req, res, next)
         ).catch((err)=> next(err))
@@ -8,7 +8,7 @@ const aysncHandler = (requestHandler) => {
 
 
 
-export {aysncHandler}
+export  {aysncHandler}
 
 // const aysncHandler = (fn)=> async(req, res, next)=> {
 //   try {
